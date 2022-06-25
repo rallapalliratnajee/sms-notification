@@ -1,6 +1,9 @@
 # SMS Notification
 > simple easy to use nodejs express app to send sms notifications using twilio
 
+## Preview
+<img src="https://user-images.githubusercontent.com/80452137/175790954-d1debf19-f31b-47ac-867e-b203533249cf.png" height="550" width="1000"/>
+
 ## Installation
 ```sh
 - git clone https://github.com/elregalo/sms-notification.git
