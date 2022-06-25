@@ -5,7 +5,10 @@ import bodyParser from "body-parser";
 const require = createRequire(import.meta.url);
 
 dotenv.config();
-const twilio = require("twilio")(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_TOKEN);
+const twilio = require("twilio")(
+  process.env.TWILIO_ACCOUNT_SID,
+  process.env.TWILIO_TOKEN
+);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -22,7 +25,7 @@ app.post("/sms", (req, res) => {
   const { mobile } = req.body;
 
   if (!mobile) {
-    res.status(400).json("Mobile number is required");
+    return res.status(400).json("Mobile number is required");
   }
 
   twilio.messages
